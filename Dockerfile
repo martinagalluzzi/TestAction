@@ -1,5 +1,5 @@
 #Use a lightweight base image
-FROM alipine:latest
+FROM alpine:latest
 
 #Set a working directory
 WORKDIR /app
