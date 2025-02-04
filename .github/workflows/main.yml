@@ -1,0 +1,17 @@
+name: Docker CI Example
+
+on: [push, pull_request]
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Build Docker image
+        run: docker build -t mt-simple-app .
+
+      - name: Run Docker container
+        run: docker run --rm my-simple-app
